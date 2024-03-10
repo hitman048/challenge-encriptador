@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/styles/normalize.css" />
+  <link rel="preconnect" href="https://rsms.me/" />
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+
+  
+</head>
+
+<body>
+  <div class="contenedor">
+    <img class="header" src="./assets/Logo-2.png" alt="logo alura" />
+    <textarea class="textonoenccont" id="textonoencriptado" spellcheck="false"
+      placeholder="Ingrese el texto aqui"></textarea>
+    <div class="avisoico">
+      <img class="iconoadvertencia" src="./assets/bi_exclamation-circle-fill-1.png" alt="icono de informacion" />
+      <p>Solo letras minúsculas y sin acentos</p>
+    </div>
+      <button class="encbtn" id="encryptButton" onclick="btnencriptar()">
+        Encriptar
+      </button>
+      <button class="desbtn" id="decryptButton" onclick="btndesencriptar()">
+        Desencriptar
+      </button>
+    <div class="enccont">
+      
+      <div class="ningunmsg" id="ningunmsg">
+        <img class="muneco" id="muneco" src="/assets/Muñeco.png" alt="mujer con una lupa sobre un diamante">
+        <h3>Ningún mensaje fue encontrado</h3>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+      </div>
+      <div class="textoenccont" id="textoenccont">
+        <textarea class="textoenc" id="textoencriptado" spellcheck="false" disabled></textarea>
+        <button class="copiarbtn" id="copiarbtn" onclick="copiar()">Copiar</button>
+        
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

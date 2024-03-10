@@ -1,0 +1,304 @@
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter", sans-serif;
+  }
+}
+*{
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  background: #e9ecf8;
+  font-family: "Inter";
+  height: 100vh;
+  margin: 0;
+  
+  /* letter-spacing: 0em; */
+}
+
+.contenedor {
+  /* colapsado entre padres e hijos */
+  /* overflow: hidden; */
+  width: 90vw;
+  height: 100vh;
+  /* logra un centrado de arriba y abajo de 20px e izquierda a derecha automatico */
+  margin: 20px auto;
+  /* activa el grid */
+  display: grid;
+  /* darle un margen entre elementos de 20 px */
+  grid-gap: 5px;
+  /* esto es porque tengo 4 columnas */
+  /* grid-template-columns: repeat(3, minmax(mincontent,maxcontent)); */
+  /* grid-template-columns: 10% 0.9fr 0.9fr 0.9fr; */
+  /* esto es porque tengo 4 filas y de tamaño automatico de acuerdo al contenido*/
+  /* grid-template-rows: 10% 1fr 0.5fr 5% 10%; */
+  /* FORMA 2 RECOMENDADA */
+  grid-template:
+    "header"          5%
+    "textonoenccont"  0.8fr
+    "avisoico" 3%
+    "encbtn" 75px
+    "desbtn" 75px
+    "enccont" 1fr/
+    1fr;
+}
+.header {
+  grid-area: header;
+}
+.textonoenccont {
+  background: #e9ecf8;
+  grid-area: textonoenccont;
+  border: none;
+  font-size: 2em;
+  box-sizing: border-box;
+  color: #0a3871;
+  font-style: normal;
+  resize: none;
+  margin: 17% 2%;
+  line-height: 45px;
+    /* overflow: auto; */
+}
+.textonoenccont::placeholder {
+  color: #0A3871; /* Cambia esto al color que prefieras */
+}
+.enccont{
+  grid-area: enccont;
+  grid-row: 6;
+}
+.textoenccont {
+  display: flex;
+  background: white;
+  padding: 1px;
+  border: none;
+  border-radius: 15px;
+  overflow: auto;
+  /* height: 100vh; */
+
+  /* display: grid;
+  grid-template-rows: 1fr 0.5fr; */
+  /* display: flex; */
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* align-items: center; */
+  align-content: center;
+  justify-content: center;
+
+}
+.textoenc {
+  /* grid-row: 1/4; */
+  align-self: stretch;
+  padding: 20px;
+  border: none;
+  font-size: 1.3em;
+  box-sizing: border-box;
+  color: #495057;
+  line-height: 1.2em;
+  border-radius: 15px;
+  resize: none;
+  width: 90%;
+  /* margin-bottom: 30%; */
+  background-color: white;
+  /* overflow: auto; */
+  line-height: 35px;
+}
+.copiarbtn {
+  /* grid-row: 5; */
+  background-color: white;
+  border-radius: 10px;
+  place-self: start center;
+  border: 1px solid #072b61;
+  border-radius: 15px;
+  color: #072b61;
+  padding: 20px;
+  width: 80%;
+  margin-bottom: 10%;
+}
+
+.muneco {
+  display: none;
+  grid-row: 2;
+  width: 70%;
+  height: 70%;
+  align-self: end;
+  justify-self: center;
+}
+.ningunmsg {
+  /* grid-row: 3; */
+  background: white;
+  /* display: flex; */
+  flex-direction: column;
+  grid-row: 1/3;
+  text-align: center;
+  font-family: "Inter";
+  /* font-size: 1.2em; */
+  align-self: center;
+  border: none;
+  border-radius: 25px;
+  padding: 0px 5%;
+  margin: 0px 5%;
+  /* align-self: start; */
+}
+.ningunmsg h3{
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  font-size: 1.5em;
+}
+.ningunmsg p {
+  font-size: 0.7em;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+
+  font-size: 1em;
+}
+
+.avisoico {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  grid-area: avisoico;
+  font-size: 0.8em;
+  gap: 5px;
+  color: #495057;
+}
+
+.botonescont {
+  /* grid-area: botonescont; */
+  /* display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid; */
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; */
+  /* gap:  8px; */
+  /* align-content: space-between;
+    align-items: center; */
+    /* justify-content: center; */
+}
+.encbtn {
+  grid-area: encbtn;
+  place-self: start center;
+  border: 1px solid #072b61;
+  border-radius: 20px;
+  background-color: #072b61;
+  color: #e9ecf8;
+  padding: 20px;
+  width: 100%;
+  /* width: 100%;
+  height: 45%; */
+  text-align: center;
+}
+.desbtn {
+  grid-area: desbtn;
+  place-self: start center;
+  border: 1px solid #072b61;
+  border-radius: 20px;
+  background-color: #eff1fa;
+  color: #072b61;
+  width: 100%;
+  padding: 20px;
+  /* padding: auto 50px; */
+  /* width: 100%;
+  height: 45%; */
+  text-align: center;
+}
+.muneco{
+  display: none;
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .contenedor {
+    grid-template:
+      "header           ." 10%
+      "textonoenccont   textonoenccont" 1fr
+      "textonoenccont   textonoenccont" 1fr
+      "avisoico         avisoico" 5%
+      "encbtn      desbtn" 10%
+      "enccont     enccont" 1fr /
+      1fr 1fr;
+  }
+  .textoenccont {
+    display: flex;
+    grid-template-rows: 1fr 0.5fr;
+    gap:10px;
+    margin-bottom: 20px;
+    /* justify-content: baseline; */
+  }
+  .textoenc {
+    grid-row: 1/2;
+  }
+  .copiarbtn {
+    grid-row: 2/3;
+    align-self: center;
+  }
+  .muneco {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contenedor {
+    grid-template:
+      "header   .               .                 enccont" 10%
+      ".        textonoenccont  textonoenccont    enccont" 1fr
+      ".        textonoenccont  textonoenccont    enccont" 0.5fr
+      ".        avisoico        avisoico          enccont" 5%
+      ".        encbtn          desbtn            enccont" 10% /
+      10%       0.9fr           0.9fr             0.9fr;
+  }
+  .enccont{
+    display: grid;
+    grid-row: 1/6;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+  }
+  .textoenccont {
+    display: grid;
+    grid-row: 1/6;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+   
+  }
+  .textoenc {
+    display: grid;
+    grid-row: 1/7;
+    /* align-self: stretch; */
+  }
+  .copiarbtn {
+    display: grid;
+    grid-row: 5/6;
+    text-align: center;
+    width: 80%;
+    /* height: 70%; */
+    place-self: start center;
+
+  }
+  .muneco {
+    display: flex;
+    width: 100%;
+  height: 30%;
+  align-self: end;
+  justify-self: center;
+  }
+  .ningunmsg {
+    display: flex;
+    grid-row: 1 / -1;
+    height: 99%;
+    text-align: center;
+    align-self: start;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+  }
+
+
+}
