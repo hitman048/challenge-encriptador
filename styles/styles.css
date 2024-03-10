@@ -17,27 +17,14 @@ body {
   font-family: "Inter";
   height: 100vh;
   margin: 0;
-  
-  /* letter-spacing: 0em; */
 }
 
 .contenedor {
-  /* colapsado entre padres e hijos */
-  /* overflow: hidden; */
   width: 90vw;
   height: 100vh;
-  /* logra un centrado de arriba y abajo de 20px e izquierda a derecha automatico */
   margin: 20px auto;
-  /* activa el grid */
   display: grid;
-  /* darle un margen entre elementos de 20 px */
   grid-gap: 5px;
-  /* esto es porque tengo 4 columnas */
-  /* grid-template-columns: repeat(3, minmax(mincontent,maxcontent)); */
-  /* grid-template-columns: 10% 0.9fr 0.9fr 0.9fr; */
-  /* esto es porque tengo 4 filas y de tamaño automatico de acuerdo al contenido*/
-  /* grid-template-rows: 10% 1fr 0.5fr 5% 10%; */
-  /* FORMA 2 RECOMENDADA */
   grid-template:
     "header"          5%
     "textonoenccont"  0.8fr
@@ -61,7 +48,6 @@ body {
   resize: none;
   margin: 17% 2%;
   line-height: 45px;
-    /* overflow: auto; */
 }
 .textonoenccont::placeholder {
   color: #0A3871; /* Cambia esto al color que prefieras */
@@ -77,20 +63,13 @@ body {
   border: none;
   border-radius: 15px;
   overflow: auto;
-  /* height: 100vh; */
-
-  /* display: grid;
-  grid-template-rows: 1fr 0.5fr; */
-  /* display: flex; */
   flex-wrap: wrap;
   flex-direction: row;
-  /* align-items: center; */
   align-content: center;
   justify-content: center;
 
 }
 .textoenc {
-  /* grid-row: 1/4; */
   align-self: stretch;
   padding: 20px;
   border: none;
@@ -101,13 +80,10 @@ body {
   border-radius: 15px;
   resize: none;
   width: 90%;
-  /* margin-bottom: 30%; */
   background-color: white;
-  /* overflow: auto; */
   line-height: 35px;
 }
 .copiarbtn {
-  /* grid-row: 5; */
   background-color: white;
   border-radius: 10px;
   place-self: start center;
@@ -128,20 +104,16 @@ body {
   justify-self: center;
 }
 .ningunmsg {
-  /* grid-row: 3; */
   background: white;
-  /* display: flex; */
   flex-direction: column;
   grid-row: 1/3;
   text-align: center;
   font-family: "Inter";
-  /* font-size: 1.2em; */
   align-self: center;
   border: none;
   border-radius: 25px;
   padding: 0px 5%;
   margin: 0px 5%;
-  /* align-self: start; */
 }
 .ningunmsg h3{
   margin-top: 30px;
@@ -170,20 +142,6 @@ body {
   gap: 5px;
   color: #495057;
 }
-
-.botonescont {
-  /* grid-area: botonescont; */
-  /* display: grid;
-  grid-template-columns: subgrid;
-  grid-template-rows: subgrid; */
-  /* display: flex;
-  flex-wrap: wrap;
-  flex-direction: row; */
-  /* gap:  8px; */
-  /* align-content: space-between;
-    align-items: center; */
-    /* justify-content: center; */
-}
 .encbtn {
   grid-area: encbtn;
   place-self: start center;
@@ -193,8 +151,6 @@ body {
   color: #e9ecf8;
   padding: 20px;
   width: 100%;
-  /* width: 100%;
-  height: 45%; */
   text-align: center;
 }
 .desbtn {
@@ -206,9 +162,6 @@ body {
   color: #072b61;
   width: 100%;
   padding: 20px;
-  /* padding: auto 50px; */
-  /* width: 100%;
-  height: 45%; */
   text-align: center;
 }
 .muneco{
@@ -231,7 +184,6 @@ body {
     grid-template-rows: 1fr 0.5fr;
     gap:10px;
     margin-bottom: 20px;
-    /* justify-content: baseline; */
   }
   .textoenc {
     grid-row: 1/2;
@@ -271,14 +223,12 @@ body {
   .textoenc {
     display: grid;
     grid-row: 1/7;
-    /* align-self: stretch; */
   }
   .copiarbtn {
     display: grid;
     grid-row: 5/6;
     text-align: center;
     width: 80%;
-    /* height: 70%; */
     place-self: start center;
 
   }
